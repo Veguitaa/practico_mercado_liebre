@@ -1,0 +1,113 @@
+/* importacion fuente roboto */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/* font-family: 'Roboto', sans-serif; */
+
+
+/* --------------------------------- HEADER ---------------------------------- */
+
+header{
+    background-color: #EAC926;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    padding-bottom: 15px;
+}
+.search-bar{
+    padding-left: 20px;
+}
+
+.compra-cuotas{
+    text-align: center;
+
+}
+
+header a{
+    text-decoration: none;
+    color: black;
+}
+
+header ul{
+    list-style: none;
+    margin-inline: -25px;
+}
+
+header nav input{
+    display: none;
+}
+
+header nav label{
+    display: block;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    width: 18px;
+    padding: 12px;
+    margin: auto auto auto;
+    border-radius: 5px;
+    background-color: #1259c3;
+}
+
+/* --------------------------------- MAIN ---------------------------------- */
+
+main {
+    background-color: #ebebeb;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+
+main h2{
+    font-size: 24px;
+    color: #666;
+}
+
+main h4{
+    font-size: 16px;
+}
+
+.price{
+    font-size: 18px;
+}
+
+.discount{
+    font-size: 16px;
+    color: #39b54a;
+}
+
+/* --------------------------------- FOOTER ---------------------------------- */
+
+
+footer{
+    font-family: 'Roboto', sans-serif;
+    margin-top: 80px;
+}
+footer p{
+    font-size: 12px;
+    
+}
+
+footer section{
+    text-align: center;
+    margin-bottom: 80px;
+    padding: 0 100px 0;
+}
+h3{
+    margin-bottom: -10px;
+}
+
+.fa-credit-card{
+    color: #1259c3;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.fa-gift{
+    color: #1259c3;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.fa-user-shield{
+    color: #1259c3;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
