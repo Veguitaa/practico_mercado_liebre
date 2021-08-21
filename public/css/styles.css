@@ -4,23 +4,42 @@
 /* font-family: 'Roboto', sans-serif; */
 
 
-/* --------------------------------- HEADER ---------------------------------- */
+/* ------------------------------------------------------------------------------------------------------
+------------------------------------------------ HEADER -------------------------------------------------- 
+------------------------------------------------------------------------------------------------------- */
 
 header{
     background-color: #EAC926;
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
 }
+
+/* imagen logo */
+
+header img{
+    width: 30%;
+    padding: 20px;
+}
+
+/* barra de busqueda */
 .search-bar{
     padding-left: 20px;
 }
 
+.fa-search{
+    border-radius: 3px;
+    background-color: #ebebeb;
+    border: 0.5px solid black;
+    padding: 1px;
+}
+/* parrafo comprar en cuotas */
 .compra-cuotas{
     text-align: center;
 
 }
 
+/* --------------------------------- seccion nav ---------------------------------- */
 header a{
     text-decoration: none;
     color: black;
@@ -31,9 +50,14 @@ header ul{
     margin-inline: -25px;
 }
 
-header nav input{
+header nav ul, header nav input{
     display: none;
 }
+
+header nav input:checked ~ div ul{
+    display: block;
+}
+
 
 header nav label{
     display: block;
@@ -41,56 +65,94 @@ header nav label{
     text-align: center;
     color: white;
     width: 18px;
-    padding: 12px;
+    padding: 10px;
     margin: auto auto auto;
     border-radius: 5px;
     background-color: #1259c3;
 }
 
-/* --------------------------------- MAIN ---------------------------------- */
+
+/* ------------------------------------------------------------------------------------------------------
+------------------------------------------------ MAIN -------------------------------------------------- 
+------------------------------------------------------------------------------------------------------- */
 
 main {
     background-color: #ebebeb;
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
+    text-align: center;
+    padding-bottom: 10px;
 }
-
+/* ----------------------------------------- titulos de secciones ------------------------------------------ */
 main h2{
     font-size: 24px;
     color: #666;
+    text-align: left;
+    padding-left: 5%;
 }
 
-main h4{
+/* ----------------------------------------- Secciones de articulos ------------------------------------------ */
+
+main section article{
+    background-color: white;
+    margin: 10px 5% auto;
+}
+
+
+/* ----------------------------------------- Imagenes ------------------------------------------ */
+/* banner */
+.banner{
+    width: 100%;
+}
+/* productos */
+main article div img {
+    width: 90%;
+}
+
+
+
+/* ----------------------------------------- Productos Descripcion------------------------------------------ */
+
+
+.product-description{
+    border-top: 1px solid #ebebeb;
+    padding: 15px;
+    text-align: left;
+}
+    
+/* logo envio */
+.fa-truck{
+    color: #39b54a;
+    border-radius: 150px;
+    border: 0.5px solid #39b54a;
+    padding: 5px;
+}
+/* descripción */
+main p{
     font-size: 16px;
+    display: none;
 }
-
+/* precio */
 .price{
     font-size: 18px;
 }
-
+/* Oferta */
 .discount{
     font-size: 16px;
     color: #39b54a;
 }
 
 
-
-
-
-
-
-
-
-/* --------------------------------- FOOTER ---------------------------------- */
-
+/* ------------------------------------------------------------------------------------------------------
+------------------------------------------------ FOOTER -------------------------------------------------- 
+------------------------------------------------------------------------------------------------------- */
 
 footer{
     font-family: 'Roboto', sans-serif;
     margin-top: 80px;
 }
 footer p{
-    font-size: 12px;
-    
+    font-size: 12px;    
 }
 
 footer section{
@@ -101,7 +163,7 @@ footer section{
 h3{
     margin-bottom: -10px;
 }
-
+/* --------------------------------- ICONOS ---------------------------------- */
 .fa-credit-card{
     color: #1259c3;
     font-size: 2em;
@@ -118,4 +180,39 @@ h3{
     color: #1259c3;
     font-size: 2em;
     margin-bottom: 10px;
+}
+
+
+
+
+/* ------------------------------------------------------------------------------------------------------
+------------------------------------------------ MEDIA QUERIES -------------------------------------------------- 
+------------------------------------------------------------------------------------------------------- */
+
+/* --------------------------------- TABLETS ---------------------------------- */
+@media (min-width: 361px){
+
+    header nav label {
+        display: none;
+    }
+
+    header nav div ul{
+        display: block;
+    }
+
+    main p{
+        display: block;
+    }
+
+    main section article {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+}
+
+
+/* --------------------------------- DESKTOP ---------------------------------- */
+
+@media (min-width: 769px){
+
 }
