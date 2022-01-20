@@ -4,34 +4,78 @@
 /* font-family: 'Roboto', sans-serif; */
 
 
+
+/* variables colores */
+:root{
+    --azul: #1259c3;
+    --verde: #39b54a;
+    --blancoOscuro: #ebebeb;
+    --amarillo: #EAC926;
+}
+
+
+
 /* ------------------------------------------------------------------------------------------------------
 ------------------------------------------------ HEADER -------------------------------------------------- 
 ------------------------------------------------------------------------------------------------------- */
 
 header{
-    background-color: #EAC926;
+    background-color: var(--amarillo);
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+
 }
+
+.headerOne{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+   
+}
+
+.headerOne div{ 
+    width: 50%;
+
+}
+
+
+
+
+
 
 /* imagen logo */
 
-header img{
-    width: 30%;
-    padding: 20px;
+.headerOne img{
+    background-size: cover; 
+    padding: 20px; 
+    
 }
 
 /* barra de busqueda */
 .search-bar{
-    padding-left: 20px;
+    
+    padding-top: 20px;
+    justify-content: center;
 }
+
+.search-bar input{
+    width: 80%;
+}
+
+
 
 .fa-search{
     border-radius: 3px;
-    background-color: #ebebeb;
+    background-color: var(--blancoOscuro);
     border: 0.5px solid black;
     padding: 1px;
+  
 }
 /* parrafo comprar en cuotas */
 .compra-cuotas{
@@ -39,7 +83,18 @@ header img{
 
 }
 
+
+
+
+
+
 /* --------------------------------- seccion nav ---------------------------------- */
+
+
+
+
+
+
 header a{
     text-decoration: none;
     color: black;
@@ -47,10 +102,14 @@ header a{
 
 header ul{
     list-style: none;
-    margin-inline: -25px;
+    /* margin-inline: -25px; */
 }
 
-header nav ul, header nav input{
+ header nav input{
+    display: none;
+}
+
+header nav ul{
     display: none;
 }
 
@@ -60,7 +119,7 @@ header nav input:checked ~ div ul{
 
 
 header nav label{
-    display: block;
+    /* display: block; */
     font-size: 20px;
     text-align: center;
     color: white;
@@ -68,8 +127,21 @@ header nav label{
     padding: 10px;
     margin: auto auto auto;
     border-radius: 5px;
-    background-color: #1259c3;
+    background-color: var(--azul);
+ 
+    
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* ------------------------------------------------------------------------------------------------------
@@ -77,14 +149,19 @@ header nav label{
 ------------------------------------------------------------------------------------------------------- */
 
 main {
-    background-color: #ebebeb;
+    background-color: var(--blancoOscuro);
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
     text-align: center;
     padding-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    
+  
 }
 /* ----------------------------------------- titulos de secciones ------------------------------------------ */
 main h2{
+    
     font-size: 24px;
     color: #666;
     text-align: left;
@@ -94,10 +171,24 @@ main h2{
 /* ----------------------------------------- Secciones de articulos ------------------------------------------ */
 
 main section article{
-    background-color: white;
+    background-color:white;
     margin: 10px 5% auto;
+    
+  
 }
 
+.articles {
+    align-items: center;
+     display: flex;
+     flex-wrap: wrap;
+    
+  
+}
+
+.articles article{
+    width: 100%;
+   
+}
 
 /* ----------------------------------------- Imagenes ------------------------------------------ */
 /* banner */
@@ -115,32 +206,74 @@ main article div img {
 
 
 .product-description{
-    border-top: 1px solid #ebebeb;
+    border-top: 1px solid var(--blancoOscuro);
     padding: 15px;
     text-align: left;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
 }
     
+
+
+
+
 /* logo envio */
+
 .fa-truck{
-    color: #39b54a;
-    border-radius: 150px;
-    border: 0.5px solid #39b54a;
+    color: var(--verde);
+    border-radius:50%;
+    border: 0.5px solid var(--verde);
     padding: 5px;
+    position: relative;
+    left: 90% ;
+    top: -28px ;
+} 
+
+
+
+/* orecio descuento */
+
+
+.price_dis{
+    display: flex; 
+  
+    
 }
+
+
+/* precio */
+.price{
+    font-size: 18px;
+    width: 30%;
+ 
+}
+
+
+
+/* Oferta */
+.discount{
+    font-size: 16px;
+    color: var(--verde);
+    width: 70%;
+  
+}
+
+
 /* descripción */
 main p{
     font-size: 16px;
     display: none;
 }
-/* precio */
-.price{
-    font-size: 18px;
-}
-/* Oferta */
-.discount{
-    font-size: 16px;
-    color: #39b54a;
-}
+
+
+
+
+
+
+
+
+
 
 
 /* ------------------------------------------------------------------------------------------------------
@@ -163,24 +296,44 @@ footer section{
 h3{
     margin-bottom: -10px;
 }
+
+
+
+
+
+
+
+
+
 /* --------------------------------- ICONOS ---------------------------------- */
 .fa-credit-card{
-    color: #1259c3;
+    color: var(--azul);
     font-size: 2em;
     margin-bottom: 10px;
 }
 
 .fa-gift{
-    color: #1259c3;
+    color: var(--azul);
     font-size: 2em;
     margin-bottom: 10px;
 }
 
 .fa-user-shield{
-    color: #1259c3;
+    color: var(--azul);
     font-size: 2em;
     margin-bottom: 10px;
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -196,23 +349,97 @@ h3{
         display: none;
     }
 
-    header nav div ul{
-        display: block;
-    }
 
     main p{
         display: block;
     }
-
-    main section article {
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    .discount{
+        
+        margin-left: 20px;
     }
 
+
+    main section .articles {
+       flex-wrap: wrap;
+         
+    }
+
+    main section .articles article{
+        width: 45%;
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        margin: 10px 2% auto;
+        
+    }
+
+    .headerOne div{
+        width: 30%;
+     
+    }
+
+
+
+    .headerTwo{
+        width: 90%;
+    }
+
+
+    .headerTwo ul{
+        display: flex;  
+    }
+
+    .headerUl{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+
+
+    
+
+    .headerTwo ul li{
+        font-size: .8rem;
+      
+       margin-left: 10px;
+    }
+    
+
+    
+    .headerOne p{
+        padding-top: .5rem;
+    }
+    
+ 
+    
+
 }
+
+
+
+
+
+
+
+
+
 
 
 /* --------------------------------- DESKTOP ---------------------------------- */
 
 @media (min-width: 769px){
 
+
+    main section .articles article{
+        width: 23%;
+     
+        margin: 10px 1% auto;
+    }
+
+
+    
+    .headerTwo ul li{
+        font-size: 1rem;
+      
+      
+    }
 }
