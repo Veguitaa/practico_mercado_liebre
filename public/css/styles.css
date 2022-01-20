@@ -216,6 +216,14 @@ main article div img {
     top: -28px ;
 } 
 
+.fa-truck:hover{
+    transform: rotate(-90deg);
+    transform-origin: right, top;
+    -ms-transform: rotate(90deg);
+    -ms-transform-origin:right, top;
+    -webkit-transform: rotate(90deg);
+    
+  }
 
 
 /* orecio descuento */
@@ -247,9 +255,13 @@ main article div img {
 
 
 /* descripción */
-main p{
+.product-description p{
     font-size: 16px;
-    display: none;
+    opacity: 0%;
+}
+
+.product-description p:hover{
+    opacity: 100%;
 }
 
 
@@ -355,26 +367,6 @@ form .bttn button {
     border-radius: 10px;
 }
 
-/* .danger {
-    border-color: red;
-}
-
-.data {
-    border: none;
-    border-bottom: 1px solid black;
-} */
-
-/*  .register form input:valid,
- textarea:valid {
-     background: rgba(0, 128, 0, 0.342);
- }
- 
- .register form input:invalid,
- textarea:invalid {
-     background: rgba(255, 0, 0, 0.171);
- } */
-
-
 
 
 
@@ -406,11 +398,16 @@ form .bttn button {
 
 .login button {
     border: none;
-    background-color: blue;
-    color: white;
+    background-color: var(--amarillo);
+    color: black;
     padding: 5px 200px;
     border-radius: 5px;
   
+}
+
+.login button:hover{
+    background-color: #0022AA;
+    color: white;
 }
 
 
@@ -437,9 +434,15 @@ form .bttn button {
     }
 
 
-    main p{
-        display: block;
+   /*  main p{
+        display: none;
     }
+
+    main p:hover{
+        display: inline-block;
+    } */
+
+    
     .discount{
         
         margin-left: 20px;
@@ -453,10 +456,13 @@ form .bttn button {
 
     main section .articles article{
         width: 45%;
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
         margin: 10px 2% auto;
         
     }
+    main section .articles article:hover{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
 
     .headerOne div{
         width: 30%;
@@ -518,7 +524,6 @@ form .bttn button {
 
     main section .articles article{
         width: 23%;
-     
         margin: 10px 1% auto;
     }
 
@@ -529,4 +534,12 @@ form .bttn button {
       
       
     }
+
+    
+
+
+
+
+
+
 }
